@@ -1,5 +1,7 @@
 package clients;
 
+import DBClient.dbReader;
+import entities.response.SearchResponseObjectModel.SearchResponse;
 import com.google.api.client.http.*;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
@@ -7,15 +9,13 @@ import com.google.api.client.json.JsonObjectParser;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import factory.URLFactory;
 
-import java.util.List;
-
 
 public class SearchClient {
 
     private static final String encodedUrl = "https://www.googleapis.com/youtube/v3/search";
-    private static final String API_KEY = "AIzaSyAQKRAvEcSdm64o2gjsnIG_C1-Opwq3jzY";
+    private static final String API_KEY = dbReader.getKey();
     public static GenericUrl url;
-    URLFactory fact = new URLFactory();
+    URLFactory fact = new URLFactory(encodedUrl);
     private HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private JsonFactory JSON_FACTORY = new JacksonFactory();
     private HttpRequestFactory requestFactory =
@@ -55,6 +55,16 @@ public class SearchClient {
         return res;
     }
 
+    public String getResponseAsString() {
+        String res = null;
+        try {
+            res = request.execute().parseAsString();
+        } catch (Exception e) {
+
+        }
+        return res;
+    }
+
     public HttpResponse getResponse() {
         try {
             response = request.execute();
@@ -71,42 +81,4 @@ public class SearchClient {
         }
     }
 
-    public static class SearchResponse {
-        public String kind;
-        String etag;
-        String nextPageToken;
-        String regionCode;
-        PageInfo pageInfo;
-        List<Items> items;
-    }
-
-    public static class PageInfo {
-        String totalResults;
-        String resultsPerPage;
-    }
-
-    public static class Items {
-        String kind;
-        String etag;
-        ID id;
-        Snippet snippet;
-        String channelID;
-        String channelTitle;
-        String liveBroadcastContent;
-
-    }
-
-    public static class ID {
-        String kind;
-        String videoId;
-    }
-
-    public static class Snippet {
-        String publishedAt;
-        String channelId;
-        String title;
-        String description;
-        String channelTitle;
-        String liveBroadcastContent;
-    }
-}
+ }

@@ -1,6 +1,6 @@
 package steps;
 
-import clients.SearchClient;
+import entities.response.SearchResponseObjectModel.SearchResponse;
 import com.google.api.client.http.HttpResponseException;
 import helpers.SearchHelper;
 
@@ -9,7 +9,7 @@ public class SearchYoutube {
     private static void run() throws Exception {
 
         SearchHelper sh = new SearchHelper();
-        SearchClient.SearchResponse response = sh.searchYoutubeWithPartAndQueryReturnString("snippet", "cute");
+        SearchResponse response = sh.searchYoutubeWithPartAndQueryReturnClass("snippet","cute");
         if (response == null) {
             System.out.println("!!!!!!!!!!!!!!!!!!DINT GET RESPONSE!!!!!!!!!!!!!!");
 
@@ -23,9 +23,7 @@ public class SearchYoutube {
 //        while ((line = rd.readLine()) != null) {
 //            result.append(line);
 //        }
-
-
-        System.out.println(response.kind);
+        System.out.println(response.getItems()[0].getSnippet().getChannelId().toString());
     }
 
     public static void main(String[] args) {

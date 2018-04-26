@@ -1,5 +1,6 @@
 package helpers;
 
+import entities.response.SearchResponseObjectModel.SearchResponse;
 import clients.SearchClient;
 import com.google.api.client.http.HttpResponse;
 import org.json.JSONObject;
@@ -34,7 +35,14 @@ public class SearchHelper {
         return client.getResponse();
     }
 
-    public SearchClient.SearchResponse searchYoutubeWithPartAndQueryReturnString(String part, String Query) {
+    public String searchYoutubeWithPartAndQueryReturnString(String part, String Query) {
+        client.url.put("part", part);
+        client.url.put("q", Query);
+        client.buildRequest(client.url);
+        return client.getResponseAsString();
+    }
+
+    public SearchResponse searchYoutubeWithPartAndQueryReturnClass(String part, String Query) {
         client.url.put("part", part);
         client.url.put("q", Query);
         client.buildRequest(client.url);
@@ -58,8 +66,7 @@ public class SearchHelper {
         return client.getResponse();
     }
 
-    public String getChannelID(JSONObject jsonObj) {
-        jsonObj.get("items");
-        return "";
+    public String getChannelID(SearchResponse rawResponse) {
+        return rawResponse.getItems()[0].getSnippet().getChannelId().toString();
     }
 }

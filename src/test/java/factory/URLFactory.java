@@ -7,13 +7,13 @@ public class URLFactory extends GenericUrl {
 
     public static GenericUrl url;
 
-    public URLFactory() {
-        initialize();
+    public URLFactory(String rawUrl) {
+        initialize(rawUrl);
     }
 
-    private void initialize() {
+    private void initialize(String rawUrl) {
         if (url == null) {
-            url = new GenericUrl("https://www.googleapis.com/youtube/v3/search");
+            url = new GenericUrl(rawUrl);
         }
     }
 
