@@ -1,4 +1,4 @@
 package helpers;
 
-public class channelHelper {
+public class ChannelHelper {
 }

@@ -1,4 +1,4 @@
 package clients;
 
-public class channelClient {
+public class ChannelClient {
 }
