@@ -9,43 +9,35 @@ public class ChannelResponse {
 
     private String kind;
 
-    public String getEtag ()
-    {
+    public String getEtag() {
         return etag;
     }
 
-    public void setEtag (String etag)
-    {
+    public void setEtag(String etag) {
         this.etag = etag;
     }
 
-    public Items[] getItems ()
-    {
+    public Items[] getItems() {
         return items;
     }
 
-    public void setItems (Items[] items)
-    {
+    public void setItems(Items[] items) {
         this.items = items;
     }
 
-    public PageInfo getPageInfo ()
-    {
+    public PageInfo getPageInfo() {
         return pageInfo;
     }
 
-    public void setPageInfo (PageInfo pageInfo)
-    {
+    public void setPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
     }
 
-    public String getKind ()
-    {
+    public String getKind() {
         return kind;
     }
 
-    public void setKind (String kind)
-    {
+    public void setKind(String kind) {
         this.kind = kind;
     }
 }

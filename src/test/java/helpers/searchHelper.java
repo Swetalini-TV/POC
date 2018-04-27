@@ -1,8 +1,9 @@
 package helpers;
 
-import entities.response.SearchResponseObjectModel.SearchResponse;
 import clients.SearchClient;
 import com.google.api.client.http.HttpResponse;
+import com.google.api.client.http.HttpResponseException;
+import entities.response.SearchResponseObjectModel.SearchResponse;
 import org.json.JSONObject;
 
 
@@ -45,15 +46,22 @@ public class SearchHelper {
     public SearchResponse searchYoutubeWithPartAndQueryReturnClass(String part, String Query) {
         client.url.put("part", part);
         client.url.put("q", Query);
+        System.out.println(client.url);
         client.buildRequest(client.url);
-        return client.getResponseAsClass();
+        SearchResponse res = client.getResponseAsClass();
+        if(res==null)
+        {
+            System.out.println("!!!!!BLIMEY!!!!!!");
+        }
+        return res;
     }
 
-    public HttpResponse searchYoutubeWithoutAPIKey() {
+    public HttpResponseException searchYoutubeWithoutAPIKey() {
         //TO DO : put code to remove API key
-        client.url.appendRawPath("jihb");
+        client.url.set("key","garbage");
+        System.out.println(client.url);
         client.buildRequest(client.url);
-        return client.getResponse();
+        return client.getResponseException();
     }
 
     public JSONObject parseResponse(String rawResponse) {
@@ -61,12 +69,12 @@ public class SearchHelper {
         return jsonObj;
     }
 
-    public HttpResponse searchYoutubeWithoutPart() {
+    public HttpResponseException searchYoutubeWithoutPart() {
         client.buildRequest(client.url);
-        return client.getResponse();
+        return client.getResponseException();
     }
 
     public String getChannelID(SearchResponse rawResponse) {
-        return rawResponse.getItems()[0].getSnippet().getChannelId().toString();
+        return rawResponse.getItems()[0].getSnippet().getChannelId();
     }
 }

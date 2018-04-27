@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestNgMavenExampleSuite" parallel="false">
+    <test name="TestNgMavenTest">
+        <classes>
+            <class name="tests.smokeTests.SearchVideoPositiveFlows"/>
+            <class name="tests.smokeTests.SearchVideoNegativeFlows"/>
+            <class name="tests.smokeTests.SearchChannelPositiveFlows"/>
+            <class name="tests.smokeTests.SearchChannelNegativeFlows"/>
+            <class name="tests.userJourneys.UserSearchesChannelAndStoresAllThreads"/>
+        </classes>
+    </test>
+</suite>

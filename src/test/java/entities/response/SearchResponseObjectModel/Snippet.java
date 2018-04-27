@@ -18,73 +18,59 @@ public class Snippet {
 
     private String liveBroadcastContent;
 
-    public String getPublishedAt ()
-    {
+    public String getPublishedAt() {
         return publishedAt;
     }
 
-    public void setPublishedAt (String publishedAt)
-    {
+    public void setPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
     }
 
-    public String getTitle ()
-    {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle (String title)
-    {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public String getChannelId ()
-    {
+    public String getChannelId() {
         return channelId;
     }
 
-    public void setChannelId (String channelId)
-    {
+    public void setChannelId(String channelId) {
         this.channelId = channelId;
     }
 
-    public String getDescription ()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription (String description)
-    {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getChannelTitle ()
-    {
+    public String getChannelTitle() {
         return channelTitle;
     }
 
-    public void setChannelTitle (String channelTitle)
-    {
+    public void setChannelTitle(String channelTitle) {
         this.channelTitle = channelTitle;
     }
 
-    public Thumbnails getThumbnails ()
-    {
+    public Thumbnails getThumbnails() {
         return thumbnails;
     }
 
-    public void setThumbnails (Thumbnails thumbnails)
-    {
+    public void setThumbnails(Thumbnails thumbnails) {
         this.thumbnails = thumbnails;
     }
 
-    public String getLiveBroadcastContent ()
-    {
+    public String getLiveBroadcastContent() {
         return liveBroadcastContent;
     }
 
-    public void setLiveBroadcastContent (String liveBroadcastContent)
-    {
+    public void setLiveBroadcastContent(String liveBroadcastContent) {
         this.liveBroadcastContent = liveBroadcastContent;
     }
 

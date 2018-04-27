@@ -9,43 +9,35 @@ public class Items {
 
     private String kind;
 
-    public String getId ()
-    {
+    public String getId() {
         return id;
     }
 
-    public void setId (String id)
-    {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getEtag ()
-    {
+    public String getEtag() {
         return etag;
     }
 
-    public void setEtag (String etag)
-    {
+    public void setEtag(String etag) {
         this.etag = etag;
     }
 
-    public Snippet getSnippet ()
-    {
+    public Snippet getSnippet() {
         return snippet;
     }
 
-    public void setSnippet (Snippet snippet)
-    {
+    public void setSnippet(Snippet snippet) {
         this.snippet = snippet;
     }
 
-    public String getKind ()
-    {
+    public String getKind() {
         return kind;
     }
 
-    public void setKind (String kind)
-    {
+    public void setKind(String kind) {
         this.kind = kind;
     }
 }

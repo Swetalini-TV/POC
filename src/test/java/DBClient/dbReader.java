@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class dbReader {
     public static String getKey() {
-        String key=null;
+        String key = null;
         Connection c = null;
         Statement stmt = null;
         try {
@@ -14,10 +14,9 @@ public class dbReader {
                             "postgres", "123");
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
-        System.out.println("Opened database successfully");
 
         try {
             stmt = c.createStatement();
@@ -27,10 +26,8 @@ public class dbReader {
         String sql = "SELECT name FROM credentials where id='api_key'";
         try {
             ResultSet temp = stmt.executeQuery(sql);
-            while ( temp.next() ) {
+            while (temp.next()) {
                 key = temp.getString("name");
-
-                System.out.println(key);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -6,23 +6,19 @@ public class Id {
 
     private String kind;
 
-    public String getVideoId ()
-    {
+    public String getVideoId() {
         return videoId;
     }
 
-    public void setVideoId (String videoId)
-    {
+    public void setVideoId(String videoId) {
         this.videoId = videoId;
     }
 
-    public String getKind ()
-    {
+    public String getKind() {
         return kind;
     }
 
-    public void setKind (String kind)
-    {
+    public void setKind(String kind) {
         this.kind = kind;
     }
 }

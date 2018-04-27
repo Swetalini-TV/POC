@@ -2,7 +2,6 @@ package entities.response.SearchResponseObjectModel;
 
 import com.google.api.client.util.Key;
 
-
 public class SearchResponse {
     @Key("regionCode")
     private String regionCode;
@@ -17,69 +16,56 @@ public class SearchResponse {
     @Key("kind")
     private String kind;
 
-    public String getRegionCode ()
-    {
+    public String getRegionCode() {
         return regionCode;
     }
 
-    public void setRegionCode (String regionCode)
-    {
+    public void setRegionCode(String regionCode) {
         this.regionCode = regionCode;
     }
 
-    public String getEtag ()
-    {
+    public String getEtag() {
         return etag;
     }
 
-    public void setEtag (String etag)
-    {
+    public void setEtag(String etag) {
         this.etag = etag;
     }
 
-    public Items[] getItems ()
-    {
+    public Items[] getItems() {
         return items;
     }
 
-    public void setItems (Items[] items)
-    {
+    public void setItems(Items[] items) {
         this.items = items;
     }
 
-    public PageInfo getPageInfo ()
-    {
+    public PageInfo getPageInfo() {
         return pageInfo;
     }
 
-    public void setPageInfo (PageInfo pageInfo)
-    {
+    public void setPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
     }
 
-    public String getNextPageToken ()
-    {
+    public String getNextPageToken() {
         return nextPageToken;
     }
 
-    public void setNextPageToken (String nextPageToken)
-    {
+    public void setNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
     }
 
-    public String getKind ()
-    {
+    public String getKind() {
         return kind;
     }
 
-    public void setKind (String kind)
-    {
+    public void setKind(String kind) {
         this.kind = kind;
     }
 
     @Override
-    public String toString()
-    {
-        return "ClassPojo [regionCode = "+regionCode+", etag = "+etag+", items = "+items+", pageInfo = "+pageInfo+", nextPageToken = "+nextPageToken+", kind = "+kind+"]";
+    public String toString() {
+        return "ClassPojo [regionCode = " + regionCode + ", etag = " + etag + ", items = " + items + ", pageInfo = " + pageInfo + ", nextPageToken = " + nextPageToken + ", kind = " + kind + "]";
     }
 }

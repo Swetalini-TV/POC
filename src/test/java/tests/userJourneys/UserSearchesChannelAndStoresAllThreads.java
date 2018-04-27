@@ -6,7 +6,8 @@ import assertions.ThreadAssertions;
 import helpers.ChannelHelper;
 import helpers.SearchHelper;
 import helpers.ThreadHelper;
-import org.junit.Test;
+import org.testng.annotations.Test;
+
 
 public class UserSearchesChannelAndStoresAllThreads {
 
@@ -19,10 +20,10 @@ public class UserSearchesChannelAndStoresAllThreads {
         ThreadHelper threadHelp = new ThreadHelper();
         ThreadAssertions threadAssert = new ThreadAssertions();
 
-        searchAssert.assertSearchYoutubeWithPartAndQuery(searchHelp.searchYoutubeWithPartAndQuery("snippet", ""));
-        String channelID = searchHelp.getChannelID(searchHelp.searchYoutubeWithPartAndQueryReturnClass("snippet",""));
+        searchAssert.assertSearchYoutubeWithPartAndQuery(searchHelp.searchYoutubeWithPartAndQuery("snippet", "cute"));
+        String channelID = searchHelp.getChannelID(searchHelp.searchYoutubeWithPartAndQueryReturnClass("snippet", "cute"));
         channelAssert.assertChannelFoundWithID(channelHelp.searchChannelWithID("snippet", channelID));
-
+        threadAssert.assertAllThreadsFoundForChannelID(threadHelp.searchAllThreadsRelatedToAChannel("snippet",channelID));
 
     }
 

@@ -7,33 +7,27 @@ public class Thumbnails {
 
     private Medium medium;
 
-    public Default getDefault()
-    {
+    public Default getDefault() {
         return adefault;
     }
 
-    public void setDefault (Default pdefault)
-    {
+    public void setDefault(Default pdefault) {
         this.adefault = pdefault;
     }
 
-    public High getHigh ()
-    {
+    public High getHigh() {
         return high;
     }
 
-    public void setHigh (High high)
-    {
+    public void setHigh(High high) {
         this.high = high;
     }
 
-    public Medium getMedium ()
-    {
+    public Medium getMedium() {
         return medium;
     }
 
-    public void setMedium (Medium medium)
-    {
+    public void setMedium(Medium medium) {
         this.medium = medium;
     }
 

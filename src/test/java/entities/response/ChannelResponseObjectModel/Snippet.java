@@ -16,73 +16,59 @@ public class Snippet {
 
     private Localized localized;
 
-    public String getPublishedAt ()
-    {
+    public String getPublishedAt() {
         return publishedAt;
     }
 
-    public void setPublishedAt (String publishedAt)
-    {
+    public void setPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
     }
 
-    public String getTitle ()
-    {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle (String title)
-    {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public String getDescription ()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription (String description)
-    {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getCustomUrl ()
-    {
+    public String getCustomUrl() {
         return customUrl;
     }
 
-    public void setCustomUrl (String customUrl)
-    {
+    public void setCustomUrl(String customUrl) {
         this.customUrl = customUrl;
     }
 
-    public Thumbnails getThumbnails ()
-    {
+    public Thumbnails getThumbnails() {
         return thumbnails;
     }
 
-    public void setThumbnails (Thumbnails thumbnails)
-    {
+    public void setThumbnails(Thumbnails thumbnails) {
         this.thumbnails = thumbnails;
     }
 
-    public String getCountry ()
-    {
+    public String getCountry() {
         return country;
     }
 
-    public void setCountry (String country)
-    {
+    public void setCountry(String country) {
         this.country = country;
     }
 
-    public Localized getLocalized ()
-    {
+    public Localized getLocalized() {
         return localized;
     }
 
-    public void setLocalized (Localized localized)
-    {
+    public void setLocalized(Localized localized) {
         this.localized = localized;
     }
 

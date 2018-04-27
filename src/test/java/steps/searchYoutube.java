@@ -1,15 +1,19 @@
 package steps;
 
-import entities.response.SearchResponseObjectModel.SearchResponse;
+import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpResponseException;
+import entities.response.SearchResponseObjectModel.SearchResponse;
 import helpers.SearchHelper;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class SearchYoutube {
 
     private static void run() throws Exception {
 
         SearchHelper sh = new SearchHelper();
-        SearchResponse response = sh.searchYoutubeWithPartAndQueryReturnClass("snippet","cute");
+        SearchResponse response = sh.searchYoutubeWithPartAndQueryReturnClass("snippet", "cute");
         if (response == null) {
             System.out.println("!!!!!!!!!!!!!!!!!!DINT GET RESPONSE!!!!!!!!!!!!!!");
 
@@ -23,7 +27,7 @@ public class SearchYoutube {
 //        while ((line = rd.readLine()) != null) {
 //            result.append(line);
 //        }
-        System.out.println(response.getItems()[0].getSnippet().getChannelId().toString());
+//        System.out.println(result.toString());
     }
 
     public static void main(String[] args) {

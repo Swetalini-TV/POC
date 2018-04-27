@@ -12,43 +12,35 @@ public class Items {
 
     private String kind;
 
-    public Id getId ()
-    {
+    public Id getId() {
         return id;
     }
 
-    public void setId (Id id)
-    {
+    public void setId(Id id) {
         this.id = id;
     }
 
-    public String getEtag ()
-    {
+    public String getEtag() {
         return etag;
     }
 
-    public void setEtag (String etag)
-    {
+    public void setEtag(String etag) {
         this.etag = etag;
     }
 
-    public Snippet getSnippet ()
-    {
+    public Snippet getSnippet() {
         return snippet;
     }
 
-    public void setSnippet (Snippet snippet)
-    {
+    public void setSnippet(Snippet snippet) {
         this.snippet = snippet;
     }
 
-    public String getKind ()
-    {
+    public String getKind() {
         return kind;
     }
 
-    public void setKind (String kind)
-    {
+    public void setKind(String kind) {
         this.kind = kind;
     }
 

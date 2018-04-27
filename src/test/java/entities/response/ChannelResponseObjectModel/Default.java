@@ -7,33 +7,27 @@ public class Default {
 
     private String url;
 
-    public String getHeight ()
-    {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight (String height)
-    {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public String getWidth ()
-    {
+    public String getWidth() {
         return width;
     }
 
-    public void setWidth (String width)
-    {
+    public void setWidth(String width) {
         this.width = width;
     }
 
-    public String getUrl ()
-    {
+    public String getUrl() {
         return url;
     }
 
-    public void setUrl (String url)
-    {
+    public void setUrl(String url) {
         this.url = url;
     }
 
