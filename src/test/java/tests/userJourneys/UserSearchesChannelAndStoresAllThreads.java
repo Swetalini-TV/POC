@@ -23,7 +23,7 @@ public class UserSearchesChannelAndStoresAllThreads {
         searchAssert.assertSearchYoutubeWithPartAndQuery(searchHelp.searchYoutubeWithPartAndQuery("snippet", "cute"));
         String channelID = searchHelp.getChannelID(searchHelp.searchYoutubeWithPartAndQueryReturnClass("snippet", "cute"));
         channelAssert.assertChannelFoundWithID(channelHelp.searchChannelWithID("snippet", channelID));
-        threadAssert.assertAllThreadsFoundForChannelID(threadHelp.searchAllThreadsRelatedToAChannel("snippet",channelID));
+        threadAssert.assertAllThreadsFoundForChannelID(threadHelp.searchAllThreadsRelatedToAChannel("snippet", channelID));
 
     }
 

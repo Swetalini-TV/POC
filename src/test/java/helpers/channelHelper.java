@@ -19,20 +19,19 @@ public class ChannelHelper {
         return client.getResponse();
     }
 
-    public HttpResponseException searchChannelWithoutIDAndPart()
-    {
+    public HttpResponseException searchChannelWithoutIDAndPart() {
         client.buildRequest(client.url);
         return client.getResponseException();
 
     }
-    public HttpResponseException searchChannelWithoutID(String part)
-    {
+
+    public HttpResponseException searchChannelWithoutID(String part) {
         client.url.put("part", part);
         client.buildRequest(client.url);
         return client.getResponseException();
     }
-    public HttpResponseException searchChannelWithoutKey(String Channel_ID)
-    {
+
+    public HttpResponseException searchChannelWithoutKey(String Channel_ID) {
         client.url.set("key", "garbage");
         client.url.put("part", "snippet");
         client.url.put("id", Channel_ID);

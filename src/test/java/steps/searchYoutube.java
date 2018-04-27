@@ -1,12 +1,8 @@
 package steps;
 
-import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpResponseException;
 import entities.response.SearchResponseObjectModel.SearchResponse;
 import helpers.SearchHelper;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class SearchYoutube {
 

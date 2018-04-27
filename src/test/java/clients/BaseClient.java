@@ -26,8 +26,7 @@ public class BaseClient {
             });
     private HttpRequest request;
 
-    public GenericUrl setup(URLFactory fact)
-    {
+    public GenericUrl setup(URLFactory fact) {
         url = fact.getURL();
         return url;
     }
@@ -59,7 +58,7 @@ public class BaseClient {
     }
 
     public HttpResponseException getResponseException() {
-        HttpResponseException res=null;
+        HttpResponseException res = null;
         try {
             request.execute();
         } catch (HttpResponseException e) {

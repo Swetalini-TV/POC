@@ -49,8 +49,7 @@ public class SearchHelper {
         System.out.println(client.url);
         client.buildRequest(client.url);
         SearchResponse res = client.getResponseAsClass();
-        if(res==null)
-        {
+        if (res == null) {
             System.out.println("!!!!!BLIMEY!!!!!!");
         }
         return res;
@@ -58,7 +57,7 @@ public class SearchHelper {
 
     public HttpResponseException searchYoutubeWithoutAPIKey() {
         //TO DO : put code to remove API key
-        client.url.set("key","garbage");
+        client.url.set("key", "garbage");
         System.out.println(client.url);
         client.buildRequest(client.url);
         return client.getResponseException();

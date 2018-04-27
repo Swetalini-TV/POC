@@ -7,8 +7,7 @@ import org.testng.annotations.Test;
 public class SearchChannelNegativeFlows {
 
     @Test
-    public void channelNegativeFlows()
-    {
+    public void channelNegativeFlows() {
         ChannelHelper channelHelp = new ChannelHelper();
         ChannelAssertions channelAssert = new ChannelAssertions();
         channelAssert.assertSearchChannelWithoutID(channelHelp.searchChannelWithoutID("snippet"));

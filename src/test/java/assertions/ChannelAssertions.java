@@ -10,18 +10,15 @@ public class ChannelAssertions {
         Assert.assertEquals(response.getStatusCode(), 200);
     }
 
-    public void assertSearchChannelWithoutID(HttpResponseException response)
-    {
-        Assert.assertEquals(400,response.getStatusCode());
+    public void assertSearchChannelWithoutID(HttpResponseException response) {
+        Assert.assertEquals(400, response.getStatusCode());
     }
 
-    public void assertSearchChannelWithoutIDAndPart(HttpResponseException response)
-    {
-        Assert.assertEquals(400,response.getStatusCode());
+    public void assertSearchChannelWithoutIDAndPart(HttpResponseException response) {
+        Assert.assertEquals(400, response.getStatusCode());
     }
 
-    public void assertSearchChannelWithoutKey(HttpResponseException response)
-    {
-        Assert.assertEquals(400,response.getStatusCode());
+    public void assertSearchChannelWithoutKey(HttpResponseException response) {
+        Assert.assertEquals(400, response.getStatusCode());
     }
 }

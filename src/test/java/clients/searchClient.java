@@ -1,6 +1,5 @@
 package clients;
 
-import DBClient.dbReader;
 import com.google.api.client.http.*;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
@@ -10,7 +9,7 @@ import entities.response.SearchResponseObjectModel.SearchResponse;
 import factory.URLFactory;
 
 
-public class SearchClient extends BaseClient{
+public class SearchClient extends BaseClient {
 
     private static final String encodedUrl = "https://www.googleapis.com/youtube/v3/search";
     public static GenericUrl url;

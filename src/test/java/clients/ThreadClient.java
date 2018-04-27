@@ -8,7 +8,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import entities.response.ThreadResponseObjectModel.ThreadResponse;
 import factory.URLFactory;
 
-public class ThreadClient extends BaseClient{
+public class ThreadClient extends BaseClient {
 
     private static final String encodedUrl = "https://www.googleapis.com/youtube/v3/commentThreads";
     public static GenericUrl url;
@@ -24,9 +24,8 @@ public class ThreadClient extends BaseClient{
             });
     private HttpRequest request;
 
-    public ThreadClient()
-    {
-        url=super.setup(fact);
+    public ThreadClient() {
+        url = super.setup(fact);
         super.addKeyToSearchURL();
     }
 

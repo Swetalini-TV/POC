@@ -9,7 +9,7 @@ import entities.response.ChannelResponseObjectModel.ChannelResponse;
 import factory.URLFactory;
 
 
-public class ChannelClient extends BaseClient{
+public class ChannelClient extends BaseClient {
 
     private static final String encodedUrl = "https://www.googleapis.com/youtube/v3/channels";
     public static GenericUrl url;
